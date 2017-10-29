@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+    {{ block.super }} - Edit
+{% endblock %}
+
+{% block stylesheets %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+<div class='container'>
+    <div class='row'>
+        <div class='offset-md-3 col-md-6'>
+            <form method='POST'>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class='form-button'>
+                    <button class='btn btn-primary' type='submit'>Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+    {{ block.super }}
+    <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
+    <link rel="stylesheet" 
+    href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" 
+    type="text/css" media="screen" charset="utf-8">
+    <script>var editor = new MediumEditor('.editable');</script>
+{% endblock javascript %}

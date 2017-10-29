@@ -1,0 +1,59 @@
+a,
+a:hover {
+    color: black;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+footer {
+    margin-top: 30px;
+}
+
+.add-post,
+.add-post:hover {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.each-post {
+    margin-bottom: 50px;
+}
+
+.form-button {
+    text-align: right;
+}
+
+.jumbotron {
+    background: #1e488c;
+    border-radius: 0px;
+    color: white;
+}
+
+.j-square > h1 {
+    margin: 0px;
+}
+
+.j-square {
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.sub-title {
+    text-align: center;
+}
+
+.sub-title h1 {
+    font-size: 15px;
+}
+
+.post-buttons {
+    text-align: right;
+}
+
+.post-date {
+    color: #cecece;
+}

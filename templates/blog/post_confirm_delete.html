@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+    {{ block.super }} - Delete
+{% endblock %}
+
+{% block stylesheets %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+<div class='container'>
+    <div class='row'>
+        <div class='offset-md-3 col-md-6'>
+            <form method='POST'>
+                {% csrf_token %}
+                <div class='form-button'>
+                    <button class='btn btn-block btn-danger' type='submit'>Delete Confirm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+    {{ block.super }}
+{% endblock %}
+
+{% block javascript %}
+    {{ block.super }}
+{% endblock javascript %}

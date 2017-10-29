@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+    {{ block.super }} - Main
+{% endblock %}
+
+{% block stylesheets %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <div class='container'>
+        <div class='row'>
+            <div class='offset-md-3 col-md-6'>
+            {% for post in Posts %}
+                <div class='each-post'>
+                    <h1><!--need to adjust size -->
+                        <a href="{{ post.get_absolute_url }}">
+                            {{ post.title|title }}
+                        </a>
+                    </h1>
+                    <div class='post-date'> <!-- change color and top margin -->
+                    {% if post.time_updated %}
+                        <p>{{ post.time_added }}</p>
+                    {% else %}
+                        <p>{{ post.time_updated }}</p>
+                    {% endif %}
+                    </div>
+                    <p>{{ post.content|safe|capfirst|truncatechars:100 }}</p>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {{ block.super }}
+{% endblock %}
+
+{% block javascript %}
+    {{ block.super }}
+{% endblock javascript %}
+

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+    {{ block.super }} - Login
+{% endblock %}
+
+{% block stylesheets %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <div class='container'>
+        <div class='row justify-content-center'>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class='btn btn-primary btn-block' type='submit' value='login'>Login</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
+
+
